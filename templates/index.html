@@ -1,0 +1,42 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MENU</title>
+    <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'main/images/pizza.png' %}" type="image/x-icon">
+</head>
+<body>
+
+    <a href="{% url 'main:index' %}"><img id="small_logo" src="{% static 'menu/images/small_logo.png' %}" alt=""></a>
+    <div class="menu_title">
+        <h1>Les Pizzas :</h1>
+    </div>
+    <div class="menu_list">
+
+
+          {% for pizza in pizzas %}
+                <div class="menu_list_item">
+                    <span class="pizza_nom">{{pizza.nom}} : </span>
+                     <span class="pizza_prix">{{pizza.prix | floatformat:2}}£</span>
+                    <span class="pizza_ingredients">{{pizza.ingredients}}</span>
+                    {% if pizza.vegetarienne  %}
+                        <span class="badge">Végétarienne</span>
+                    {% endif %}
+                </div>
+          {% endfor %}
+
+    </div>
+</body>
+</html>

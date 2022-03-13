@@ -1,0 +1,72 @@
+
+body {
+    background : linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) , url("images/menu_background.jpg") no-repeat  center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    margin : 0;
+    color: white;
+}
+#small_logo {
+    margin-top: 25px ;
+    margin-left: 35px;
+}
+h1{
+    background-color: #c66124;
+    display: inline-block;
+    margin-top: 50px  ;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    padding: 8px 22px;
+    color: black ;
+
+}
+.menu_title {
+    margin-top:45px ;
+    margin-bottom:50px ;
+
+}
+ .menu_list{
+     margin-left: 30px;
+ }
+ .menu_list_item {
+     margin: 30px 0px;
+ }
+ .pizza_nom {
+    font-size: 25px;
+     font-weight: bold;
+     font-family: 'Barlow Condensed', sans-serif;
+     display: inline-block;
+     width : 350px ;
+ }
+ .pizza_prix{
+     font-size: 30px;
+     color:#c66124 ;
+     width:60px;
+     margin-left: 25px;
+     font-family: 'Average', serif;
+
+     text-align: right;
+
+     display: inline-block;
+
+
+ }
+ .pizza_ingredients {
+     display: block;
+     color: gray;
+     width :320px ;
+
+ }
+ .badge {
+     display: inline-block;
+     background-color: #c66124;
+     color: black;
+     font-size: 12px;
+     padding: 3px 8px;
+     margin-top: 4px;
+     border-radius: 8px ;
+     font-weight: bold;
+ }
