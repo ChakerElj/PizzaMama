@@ -4,6 +4,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+gunicorn = "*"
 
 [dev-packages]
 
